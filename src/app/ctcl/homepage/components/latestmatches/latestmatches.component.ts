@@ -4,8 +4,8 @@ import {Component} from "@angular/core";
 import {Router} from "@angular/router";
 @Component({
   selector: 'ctcl-latest-matches',
-  templateUrl: 'latestMatches.html',
-  styleUrls: ['latestMatches.scss'],
+  templateUrl: 'latestmatches.html',
+  styleUrls: ['latestmatches.scss'],
 })
 export class LatestMatchesComponent {
   private ngUnsubscribe: Subject<void> = new Subject<void>();
