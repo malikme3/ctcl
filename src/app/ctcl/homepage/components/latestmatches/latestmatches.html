@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12 col-12"
+       baCardClass="xmedium-card feed-comply-panel with-scroll calendar-panel">
+    <ctcl-carousel headerText="Recent Matches" [value]="displayScoreData" [circular]="true" [pageLinks]="5"
+                   [autoplayInterval]="10000" [effectDuration]="slow" [numVisible]="3">
+      <ng-template let-player pTemplate="item">
+        <div class="ui-grid ui-grid-responsive" (click)="onClickMatch(player)">
+          <div class="ui-grid-row">
+            <!--<div class="ui-grid-col-12 align='center'"><h5>{{player.team_1}} Vs {{player.team_2}} </h5></div>-->
+            <div style="display:table-cell; vertical-align:middle; text-align:center"
+                 class="ui-grid-col-12 align='center'">
+              <img src="assets/images/sm-teams/{{player.team_id_1}}.png"> Vs
+              <img src="assets/images/sm-teams/{{player.team_id_2}}.png"></div>
+          </div>
+          <div class="ui-grid-row">
+            <div class="ui-grid-col-6 text-lg-left">{{player.team_1}}</div>
+            <div class="ui-grid-col-6 textRight">{{player.net_score_1}}</div>
+          </div>
+          <div class="ui-grid-row">
+            <div class="ui-grid-col-6 text-left">{{player.team_2}}</div>
+            <div class="ui-grid-col-6 textRight">{{player.net_score_2}}</div>
+          </div>
+          <div class="ui-grid-row">
+            <div class="ui-grid-col-12 text-left">{{player.result}}</div>
+          </div>
+        </div>
+      </ng-template>
+    </ctcl-carousel>
+  </div>
+  <div class="col-xlg-12 col-lg-12 col-md-12 col-sm-12 col-12"
+       baCardClass="xmedium-card feed-comply-panel with-scroll calendar-panel">
+    <ctcl-carousel headerText="Next Matches" [value]="nextMatchesData" [circular]="true" [pageLinks]="5"
+                   [autoplayInterval]="10000" [effectDuration]="slow" [numVisible]="3">
+      <ng-template let-player pTemplate="item">
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-6 text-left">{{player.seasonName}}</div>
+          <div class="ui-grid-col-6 textRight">{{player.date | date}}</div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-8 text-left">{{player.teams}}</div>
+          <div class="ui-grid-col-4 text-right">{{player.groundName}}</div>
+        </div>
+      </ng-template>
+    </ctcl-carousel>
+  </div>
+</div>
