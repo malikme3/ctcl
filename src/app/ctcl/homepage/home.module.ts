@@ -9,9 +9,19 @@ import {HomeComponent} from "./home.component";
   imports: [
     ThemeModule,
     AngularEchartsModule,
+    CarouselModule,    
+    AccordionModule,
+    PanelModule,
   ],
+  
   declarations: [
     HomeComponent,
+    LatestMatchesComponent,    
   ],
+   providers: [
+   HomePageService,  
+
+  ]
+})
 })
 export class HomeModule { }
