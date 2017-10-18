@@ -1,29 +1,23 @@
 import { NbMenuItem } from '@nebular/theme';
 
-export const MENU_ITEMS: NbMenuItem[] = [
+export const CTCL_MENU_ITEMS: NbMenuItem[] = [
   {
-    title: 'Dashboard',
+    title: 'Ctcl ctcl Home',
     icon: 'nb-home',
-    link: '/pages/dashboard',
+    link: '/ctcl/home',
     home: true,
   },
   {
-    title: 'ctcl-dasboard',
-    icon: 'nb-home',
-    link: '/ctcl/homepage',
-    home: true,
-  },
-  {
-    title: 'FEATURES',
+    title: 'CTCL FEATURES',
     group: true,
   },
   {
-    title: 'UI Features',
+    title: 'CTCL UI Features',
     icon: 'nb-keypad',
     link: '/pages/ui-features',
     children: [
       {
-        title: 'Buttons',
+        title: 'CTCL Buttons',
         link: '/pages/ui-features/buttons',
       },
       {
@@ -53,7 +47,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
-    title: 'Forms',
+    title: 'CTCL Forms',
     icon: 'nb-compose',
     children: [
       {
